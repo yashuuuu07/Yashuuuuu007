@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        header{
+            background:#2874f0;
+            color:white;
+            text-align:center;
+            padding:30px 10px;
+        }
+
+        nav{
+            background:#1c5ed6;
+            text-align:center;
+            padding:10px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        section{
+            padding:60px 20px;
+            text-align:center;
+        }
+
+        .profile-img{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            object-fit:cover;
+            margin:20px 0;
+        }
+
+        .projects{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            width:250px;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card a{
+            display:inline-block;
+            margin-top:10px;
+            color:#2874f0;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        input, textarea{
+            width:80%;
+            padding:10px;
+            margin:10px 0;
+            border-radius:5px;
+            border:1px solid #ccc;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#2874f0;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        footer{
+            background:#2874f0;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your Name</h1>
+    <p>Web Developer | Student | Creator</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/150" class="profile-img">
+    <p>Hello! I am a passionate developer who loves building websites and learning new technologies.</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Project One</h3>
+            <p>Simple website project.</p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Project Two</h3>
+            <p>Portfolio website design.</p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Project Three</h3>
+            <p>E-commerce demo site.</p>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="showMessage(event)">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea rows="4" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="msg" style="margin-top:15px; color:green;"></p>
+</section>
+
+<footer>
+    © 2026 Simple Portfolio | All Rights Reserved
+</footer>
+
+<script>
+    function showMessage(event){
+        event.preventDefault();
+        document.getElementById("msg").innerText = "Thank you! Your message has been sent.";
+    }
+</script>
+
+</body>
+</html>
